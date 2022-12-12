@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parks Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <style>
+        article  h3, h4, h5, p, li, a  {
+            color: #1a120e;
+        }
+
+        article h3 {
+            text-align: center; top: -15px; position: relative; z-index: 2;
+        }
+        img {
+            top: 10px;
+            position: relative;
+            margin: 10px;
+            transition: .2s;
+        }
+
+        img:hover {
+            transform: scale(1.4); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            z-index: 2;
+        }
+        
+        aside h4 {
+            text-align: center;
+        }
+
+        aside a:hover {
+            
+            text-shadow: 2px 2px #557340;
+        }
+
+        @media screen and (max-width:1830px) {
+            body {
+                grid-template-rows: repeat(11, 82px);
+            }
+
+            .logo2 {
+                background-image: none;
+            }
+            .logo2Flipped {
+                background-image: none;
+            }
+
+            .logo3 {
+                background-image: none;
+            }
+
+            article {
+                grid-row: 3/11;
+            }
+
+            aside {
+                
+                height: 460px;
+            }
+
+            aside li {
+                font-size: smaller;
+            }
+
+            footer {
+                grid-row: 11/12;
+            }
+        }
+
+        @media screen and (max-width:1770px) {
+            .logo2 {
+                background-image: none;
+            }
+        }
+
+        @media screen and (max-width:1788px) {
+            .cards h3 {
+                top: -245px;
+            }
+        }
+
+        @media screen and (max-width:1748px) {
+            
+           
+            .cards img {
+                width: 250px;
+                height: 200px;
+            }
+        }
+
+        @media screen and (max-width:1580px)
+
+        {
+            .cards img {
+                width: 215px;
+                height: 150px;
+            }
+
+            .cards h3 {
+                top: -200px;
+            }
+        }
+
+        @media screen and (max-width:1580px) {
+            header {
+                background-image: none;
+            }
+
+        }
+        @media screen and (max-width:1407px) {
+            .cards img {
+                width: 180px;
+                height: 120px;
+            }
+
+            .cards h3 {
+                top: -170px;
+            }
+
+            
+        }
+        @media screen and (max-width:1390px) {
+            body {
+                grid-template-rows: repeat(13, 82px);
+            }
+            article {
+                grid-row: 4/11;
+            }
+            aside {
+                grid-row: 11/13;
+                height: initial;
+            }
+
+            footer {
+                grid-row: 13/14;
+            }
+        }
+
+        @media screen and (max-width:1238px) {
+            .cards img {
+                top: -10px;
+            }
+
+            .cards h3 {
+                top: -175px;
+                font-size: smaller;
+            }
+        }
+
+        @media screen and (max-width: 1130px) {
+            header h1 {
+                margin-top: 0px;
+            }
+            header h3 {
+                margin-top: -30px;
+            }
+        }
+        
+        
+
+        @media screen and (max-width:1072px) {
+            article {
+                background-image: none;
+            }
+
+            .cards img {
+                top: 30px;
+            }
+
+            .cards h3 {
+                top: -135px;
+            }
+
+            body {
+                grid-template-rows: repeat(15, 82px);
+            }
+            article {
+                grid-row: 4/15;
+            }
+            aside {
+                grid-row: 13/15;
+                height: initial;
+            }
+
+            footer {
+                grid-row: 15/16;
+            }
+        }
+
+        @media screen and (max-width:830px) {
+            body {
+                grid-template-rows: repeat(17, 82px);
+            }
+            article {
+                grid-row: 4/15;
+            }
+            aside {
+                grid-row: 15/17;
+                height: initial;
+            }
+
+            footer {
+                grid-row: 17/18;
+            }
+
+            .cards h3 {
+                top: -170px;
+            }
+        }
+
+        @media screen and (max-width:760px) {
+            body {
+                grid-template-rows: repeat(17, 82px);
+            }
+            article {
+                grid-row: 4/15;
+            }
+            aside {
+                grid-row: 15/17;
+                height: initial;
+            }
+
+            footer {
+                grid-row: 17/18;
+            }
+
+            .cards h3 {
+                top: -170px;
+            }
+        }
+
+        @media screen and (max-width: 689px) {
+            body {
+                grid-template-rows: repeat(20, 82px);
+            }
+
+            article {
+                grid-row: 4/18;
+            }
+
+            aside {
+                grid-row: 18/20;
+            }
+
+            footer {
+                grid-row: 20/21;
+            }
+
+            .cardwrapper {
+                justify-content: center;
+            }
+
+            .cards h3 {
+                top: -150px;
+            }
+
+            aside p {
+                margin-top: 10px;
+            } 
+        }
+
+        @media screen and (max-width:429px) {
+            body {
+                grid-template-rows: repeat(26, 82px);
+            }
+
+            article {
+                grid-row: 4/24;
+            }
+
+            aside {
+                grid-row: 24/26;
+            }
+
+            footer {
+                grid-row: 26/27;
+            }
+
+            header h3 {
+                margin-top: -10px;
+            }
+
+        }
+        
+
+    </style>
+    
+</head>
+<body>
+    
+
+    <header> 
+        
+        <h1>Parks Informational Interactable Home Page</h1>
+        <h3 style="color: #D9BF8F;">By Alicia Alcazar</h3>
+    </header>
+    <nav>
+    <a href="index.html" style="left:30px; position: relative;">Home</a> 
+    <a href="local.html">Local Parks</a>
+    <a href="state.html">State Parks</a>
+    </nav>
+    <article>
+        <h3 style="margin-bottom: 0;">What is a park?:</h3>
+        <p style="margin-top: 0;"> Parks are places that can be used for many things such as human enjoyment and recreation, and some parks are for preservation and conservation. 
+        Most parks are either natural, semi-natural or small grass spaces for humans. </p>
+        <h3 style="margin-bottom: 0;">Types of parks and their differences:</h3>
+
+        <h5 style="margin-bottom: 0; ">Local Parks:</h5>
+        <p style="margin-top: 0;"> These types of parks are what you see in neighborhoods and around town, and are owned by the township. They are great places that you can visit daily with friends and family anytime.
+            In the local parks page I will be talking about these types of parks.
+            Check out my Local parks page to read a few reviews and get more information on some parks local to the Johnson county area.
+        </p>
+        
+        <h5 style="margin-bottom: 0;">State Parks:</h5>
+        <p style="margin-top: 0;">State parks are owned by the state, and are great places to go for a day trip of fun outdoor time. These types of park offer more amenities such as cabins, boat rentals, atms, and
+            many more depending on your location.
+            Check out my State parks page to see some reviews and view links to more information for a few Indiana state parks! </p>
+        
+        <h5 style="margin-bottom: 0;">National Parks:</h5>
+        <p style="margin-top: 0;">National parks are typically larger than other types of parks, and their are fedraly owned by the tax payers of the United States. The money used by the tax payers is for the purpose
+            of maintaining these area.  National parks are procted lands with the purpose of preservation and can not be used for anything else. Below are some images of two national parks and
+            their changes through the years to read more about these click the link in the 'Fun Facts List'
+        </p>
+        
+        <div class="cardwrapper">
+        <div class="cards">
+            <img src="images/YellowStoneNPThen.png" alt="">
+            <h3 >Yellow Stone Then</h3>
+        </div>
+        <div class="cards">
+            <img src="images/YellowStoneNPNow.png" alt="">
+            <h3 >Yellow Stone Now</h3>
+        </div>
+        <div class="cards">
+            <img src="images/GlacierNP.png" alt="">
+            <h3 >Glacier Then</h3>
+        </div>
+        <div class="cards">
+            <img src="images/GlacierNPNow.png" alt="">
+            <h3 >Glacier Now</h3>
+        </div>
+    </div>
+
+    </article>
+    <aside>
+        <div class="asideWrapper">
+        <h4>Fun Facts List</h4>
+        <ul>
+            <li><a  href="https://www.10best.com/interests/outdoor-adventures/national-parks-then-and-now/">www.10best.com/parks then and now</a> </li><br>
+            <li>Roosevelt helped create the United States Forest Service that established 150 national forests,
+                 51 federal bird reserves, 4 game preserves, 5 parks, and 18 monuments</li> <br>
+            <li>Yellow Stone Park was the worlds first park and was established in 1872</li>
+        </ul>
+    </div>
+    </aside>
+    
+    <div class="ovalLogo"></div>
+    <div class="logo2"></div>
+    <div class="logo2Flipped"></div>
+    
+    <footer>Alicia Alcazar 12/11/2022 CIT 212 Final Project</footer>
+</body>
+</html>
